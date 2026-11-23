@@ -1,43 +1,83 @@
-
 <!DOCTYPE html>
 <html lang="nl">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>NEON DODGE</title>
-
+    <title>VÉLORA — The World That Listens</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <div id="menu">
+        <div class="menu-content">
+            <div class="eyebrow">AN UNKNOWN WORLD AWAITS</div>
+            <h1>VÉLORA</h1>
+            <p>THE WORLD THAT LISTENS</p>
 
-    <h1>NEON DODGE</h1>
-    <p>Survive the meteor storm!</p>
+            <div id="accountPanel">
+                <div id="loginArea">
+                    <div class="account-title">PLAYER ACCOUNT</div>
+                    <div class="account-subtitle">Sign in to save your progress</div>
+                    <button id="googleButton" class="google-button">
+                        <span class="google-icon">G</span>
+                        SIGN IN WITH GOOGLE
+                    </button>
+                    <div id="loginStatus">Connect your Google account</div>
+                </div>
 
-    <div class="game-container">
+                <div id="loggedInArea" style="display:none">
+                    <div class="account-title">SIGNED IN</div>
+                    <div id="playerName"></div>
+                    <div id="playerEmail"></div>
+                    <button id="logoutButton" class="logout-button">SIGN OUT</button>
+                </div>
+            </div>
 
-        <div class="stats">
-            <span>SCORE: <span id="score">0</span></span>
-            <span>BEST: <span id="best">0</span></span>
+            <button id="startButton" disabled>ENTER THE WORLD</button>
+
+            <div id="playersPanel">
+                <div class="players-heading">PLAYERS IN VÉLORA</div>
+                <div id="playersList">Loading players...</div>
+            </div>
+
+            <div class="menu-bottom">A WORLD WITHOUT SOUND IS A WORLD WITHOUT FORM</div>
         </div>
-
-        <canvas id="game" width="440" height="550"></canvas>
-
-        <p id="message">Ready to play?</p>
-
-        <button id="startButton" onclick="startGame()">
-            START GAME
-        </button>
-
-        <p class="controls">
-            MOVE: WASD / ARROW KEYS
-        </p>
-
     </div>
 
-    <script src="app.js"></script>
+    <div id="gameUI">
+        <canvas id="game"></canvas>
 
+        <header>
+            <div class="logo">VÉLORA</div>
+            <div class="objective">FIND THE LOST MEMORIES</div>
+            <div class="crystals">✦ <span id="crystalCount">0</span> / 5</div>
+        </header>
+
+        <div id="statusPanel">
+            <div class="stat-line"><span>VITALITY</span><div class="stat-track"><div id="healthBar"></div></div></div>
+            <div class="stat-line"><span>ENERGY</span><div class="stat-track"><div id="energyBar"></div></div></div>
+        </div>
+
+        <div id="cooldownContainer">
+            <div class="cooldown-label">
+                <span>SHOCK WAVE</span>
+                <span id="cooldownText">READY</span>
+            </div>
+            <div id="cooldown"><div id="cooldownBar"></div></div>
+        </div>
+
+        <div id="hint">WASD — MOVE &nbsp; SHIFT — SPRINT &nbsp; SPACE — SHOCK WAVE</div>
+        <div id="message"></div>
+    </div>
+
+    <div id="winScreen">
+        <div class="win-content">
+            <div class="eyebrow">MEMORY RESTORED</div>
+            <h1>THE WORLD REMEMBERS</h1>
+            <p>You brought the light back to Vélora.</p>
+            <button id="restartButton">PLAY AGAIN</button>
+        </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
 </body>
 </html>
