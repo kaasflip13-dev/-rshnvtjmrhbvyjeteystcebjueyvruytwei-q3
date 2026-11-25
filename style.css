@@ -121,3 +121,28 @@ button:hover {
     pointer-events: none;
     box-shadow: inset 0 0 90px rgba(0, 0, 0, 0.6);
 }
+
+.boss-bar {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    height: 10px;
+    border: 1px solid #ff6a40;
+    border-radius: 6px;
+    background: #00000099;
+    overflow: hidden;
+    pointer-events: none;
+    box-shadow: 0 0 12px #ff3a1a88;
+}
+
+.boss-bar.hidden {
+    display: none;
+}
+
+#bossFill {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, #ff3a1a, #ffa040);
+}
