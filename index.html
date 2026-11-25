@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>NEON DODGE 3D</title>
+    <title>SUNSET STRIKE 3D</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>NEON DODGE 3D</h1>
-    <p>Survive the meteor storm!</p>
+    <h1>SUNSET STRIKE 3D</h1>
+    <p>Destroy the enemy squadron!</p>
 
     <div class="game-container">
 
@@ -22,8 +22,15 @@
             <span>BEST: <span id="best">0</span></span>
         </div>
 
+        <div class="stats">
+            <span>HULL: <span id="hp">&#9829;&#9829;&#9829;&#9829;&#9829;</span></span>
+            <span>BOMBS: <span id="bombs">3</span></span>
+            <span>WEAPON: LV<span id="weapon">1</span></span>
+        </div>
+
         <div class="canvas-wrap">
             <canvas id="game" width="440" height="550"></canvas>
+            <div id="bossBar" class="boss-bar hidden"><div id="bossFill"></div></div>
             <div id="overlay" class="overlay hidden">
                 <div class="overlay-title">GAME OVER</div>
                 <div id="overlayScore" class="overlay-score"></div>
@@ -37,7 +44,7 @@
         </button>
 
         <p class="controls">
-            MOVE: WASD / ARROW KEYS
+            MOVE: WASD / ARROW KEYS &nbsp;|&nbsp; BOMB: SPACE &nbsp;|&nbsp; M: MUTE &nbsp;|&nbsp; AUTO-FIRE
         </p>
 
     </div>
